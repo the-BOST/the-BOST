@@ -39,9 +39,9 @@ root@the-BOST:~$ █
 ## `> cat stats.log`
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=the-BOST&show_icons=true&include_all_commits=true&count_private=true&border_radius=12&bg_color=0d0221&title_color=ff2a6d&icon_color=00f7ff&text_color=d1f7ff&border_color=7b2ff7" alt="GitHub stats" height="170"/>
+  <img src="./assets/stats.svg" alt="GitHub stats" height="170"/>
 </p>
 
 <p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=the-BOST&bg_color=0d0221&color=00f7ff&line=ff2a6d&point=ffffff&area=true&area_color=7b2ff7&hide_border=false&radius=12&title_color=ff2a6d" alt="activity graph" width="100%"/>
+  <img src="./assets/activity.svg" alt="activity graph" width="100%"/>
 </p>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="450" height="230" viewBox="0 0 450 230">
+  <defs>
+    <linearGradient id="neon" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff2a6d"/><stop offset="50%" stop-color="#7b2ff7"/><stop offset="100%" stop-color="#00f7ff"/>
+    </linearGradient>
+  </defs>
+  <style>
+    .t { font-size: 18px; font-weight: 700; fill: #ff2a6d; }
+    .in { opacity: 0; animation: in .6s ease forwards; }
+    @keyframes in { to { opacity: 1; } }
+  </style>
+  <rect x="1.5" y="1.5" width="447" height="227" rx="12" fill="#0d0221" stroke="url(#neon)" stroke-width="3"/>
+  <g fill="#d1f7ff" font-family="Fira Code, JetBrains Mono, Consolas, monospace">
+  <text class="t" x="25" y="36">&gt; the-BOST's stats</text>
+  <g class="in" style="animation-delay:0.00s"><text x="25" y="72" font-size="14" fill="#00f7ff">[*]</text><text x="62" y="72" font-size="14">Total stars:</text><text x="295" y="72" font-size="14" font-weight="700" text-anchor="end">3</text></g>
+  <g class="in" style="animation-delay:0.12s"><text x="25" y="98" font-size="14" fill="#00f7ff">[+]</text><text x="62" y="98" font-size="14">Commits (1y):</text><text x="295" y="98" font-size="14" font-weight="700" text-anchor="end">31</text></g>
+  <g class="in" style="animation-delay:0.24s"><text x="25" y="124" font-size="14" fill="#00f7ff">[&gt;]</text><text x="62" y="124" font-size="14">Pull requests:</text><text x="295" y="124" font-size="14" font-weight="700" text-anchor="end">0</text></g>
+  <g class="in" style="animation-delay:0.36s"><text x="25" y="150" font-size="14" fill="#00f7ff">[!]</text><text x="62" y="150" font-size="14">Issues:</text><text x="295" y="150" font-size="14" font-weight="700" text-anchor="end">0</text></g>
+  <g class="in" style="animation-delay:0.48s"><text x="25" y="176" font-size="14" fill="#00f7ff">[#]</text><text x="62" y="176" font-size="14">Public repos:</text><text x="295" y="176" font-size="14" font-weight="700" text-anchor="end">11</text></g>
+  <g class="in" style="animation-delay:0.60s"><text x="25" y="202" font-size="14" fill="#00f7ff">[@]</text><text x="62" y="202" font-size="14">Followers:</text><text x="295" y="202" font-size="14" font-weight="700" text-anchor="end">2</text></g>
+  <text x="375" y="137" font-size="44" font-weight="700" text-anchor="middle" fill="#00f7ff">34</text><text x="375" y="165" font-size="12" text-anchor="middle" opacity=".7">contributions / 1y</text>
+  </g>
+</svg>
