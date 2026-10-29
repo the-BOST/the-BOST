@@ -41,7 +41,3 @@ root@the-BOST:~$ █
 <p align="center">
   <img src="./assets/stats.svg" alt="GitHub stats" height="170"/>
 </p>
-
-<p align="center">
-  <img src="./assets/activity.svg" alt="activity graph" width="100%"/>
-</p>

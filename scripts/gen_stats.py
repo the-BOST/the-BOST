@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate assets/stats.svg and assets/activity.svg from the GitHub GraphQL API.
+"""Generate assets/stats.svg from the GitHub GraphQL API.
 
 Needs GITHUB_TOKEN in the environment. Usage: python3 scripts/gen_stats.py [username]
 """
@@ -30,7 +30,6 @@ query($login: String!) {
       totalIssueContributions
       contributionCalendar {
         totalContributions
-        weeks { contributionDays { date contributionCount } }
       }
     }
   }
@@ -99,46 +98,7 @@ def stats_card(u):
     return frame(450, 230, f"&gt; {USER}'s stats", "\n".join(body))
 
 
-def activity_graph(u, days=31):
-    weeks = u["contributionsCollection"]["contributionCalendar"]["weeks"]
-    series = [d for w in weeks for d in w["contributionDays"]][-days:]
-    w, h, left, right, top, bottom = 900, 300, 50, 20, 60, 45
-    pw, ph = w - left - right, h - top - bottom
-    peak = -(-max(max(d["contributionCount"] for d in series), 1) // 4) * 4  # round up so ticks are integers
-    pts = [
-        (left + i * pw / (len(series) - 1), top + ph - d["contributionCount"] / peak * ph)
-        for i, d in enumerate(series)
-    ]
-    line = " ".join(f"{x:.1f},{y:.1f}" for x, y in pts)
-    area = f"{left},{top + ph} {line} {left + pw},{top + ph}"
-
-    body = []
-    for k in range(5):
-        y = top + ph - k * ph / 4
-        body.append(
-            f'  <line x1="{left}" x2="{left + pw}" y1="{y:.1f}" y2="{y:.1f}" stroke="{PURPLE}" stroke-opacity=".25"/>'
-            f'<text x="{left - 10}" y="{y + 4:.1f}" font-size="11" text-anchor="end" opacity=".7">{k * peak // 4}</text>'
-        )
-    for i, d in enumerate(series):
-        if i % 3 == 0:
-            body.append(
-                f'  <text x="{pts[i][0]:.1f}" y="{h - 20}" font-size="11" text-anchor="middle" opacity=".7">{d["date"][8:]}</text>'
-            )
-    body.append(f'  <polygon points="{area}" fill="{PURPLE}" fill-opacity=".35"/>')
-    body.append(
-        f'  <polyline points="{line}" fill="none" stroke="{PINK}" stroke-width="2.5" stroke-linejoin="round" '
-        f'stroke-dasharray="3000" stroke-dashoffset="3000" style="animation: draw 2.5s ease forwards"/>'
-    )
-    body.append("  <style>@keyframes draw { to { stroke-dashoffset: 0; } }</style>")
-    body.extend(
-        f'  <circle cx="{x:.1f}" cy="{y:.1f}" r="3" fill="{CYAN}" class="in" style="animation-delay:{1 + i * 0.04:.2f}s"/>'
-        for i, (x, y) in enumerate(pts)
-    )
-    return frame(w, h, f"&gt; {USER}'s contribution graph (last {days} days)", "\n".join(body))
-
-
 if __name__ == "__main__":
     user = fetch()
     (ASSETS / "stats.svg").write_text(stats_card(user), encoding="utf-8")
-    (ASSETS / "activity.svg").write_text(activity_graph(user), encoding="utf-8")
-    print("wrote stats.svg and activity.svg")
+    print("wrote stats.svg")
