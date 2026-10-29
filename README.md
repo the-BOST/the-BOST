@@ -11,7 +11,7 @@
 -->
 
 <p align="center">
-  <img src="./assets/banner.webp" alt="the-BOST banner" width="100%"/>
+  <img src="./assets/cyber-terminal.svg" alt="the-BOST terminal" width="100%"/>
 </p>
 
 ## `> whoami`
