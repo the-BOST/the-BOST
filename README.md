@@ -23,7 +23,7 @@ the-BOST
 root@the-BOST:~$ cat about.txt
 [+] Role      : Pentester & OSINT investigator
 [+] Focus     : Offensive security, recon, reverse engineering
-[+] Playing   : CTFs && configuring my own network
+[+] Playing   : CTFs & configuring my own network
 [+] Motto     : "If it's connected, it's vulnerable."
 
 root@the-BOST:~$ nmap -sV the-BOST
