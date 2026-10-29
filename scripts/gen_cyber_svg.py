@@ -11,7 +11,7 @@ OUT = ROOT / "assets" / "cyber-terminal.svg"
 # GitHub blocks external resources inside SVGs, so the background is inlined.
 bg_uri = "data:image/webp;base64," + base64.b64encode(BG.read_bytes()).decode()
 
-svg = f"""<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="{W}" height="{H}" viewBox="0 0 {W} {H}">
+svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">
   <defs>
     <linearGradient id="neon" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#ff2a6d"/>
@@ -46,7 +46,7 @@ svg = f"""<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org
   <text x="{W / 2}" y="24" text-anchor="middle" font-size="13" fill="#d1f7ff" opacity=".7">root@the-BOST: ~/</text>
 
   <g clip-path="url(#screen)">
-    <image x="2" y="36" width="{W - 4}" height="{H - 38}" preserveAspectRatio="xMidYMid slice" href="{bg_uri}" xlink:href="{bg_uri}"/>
+    <image x="2" y="36" width="{W - 4}" height="{H - 38}" preserveAspectRatio="xMidYMid slice" href="{bg_uri}"/>
     <rect x="2" y="36" width="{W - 4}" height="{H - 38}" fill="#0d0221" opacity=".35"/>
     <rect x="2" y="36" width="{W - 4}" height="{H - 38}" fill="url(#scan)"/>
   </g>
