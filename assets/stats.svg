@@ -17,7 +17,7 @@
   <g class="in" style="animation-delay:0.24s"><text x="25" y="124" font-size="14" fill="#00f7ff">[&gt;]</text><text x="62" y="124" font-size="14">Pull requests:</text><text x="295" y="124" font-size="14" font-weight="700" text-anchor="end">0</text></g>
   <g class="in" style="animation-delay:0.36s"><text x="25" y="150" font-size="14" fill="#00f7ff">[!]</text><text x="62" y="150" font-size="14">Issues:</text><text x="295" y="150" font-size="14" font-weight="700" text-anchor="end">0</text></g>
   <g class="in" style="animation-delay:0.48s"><text x="25" y="176" font-size="14" fill="#00f7ff">[#]</text><text x="62" y="176" font-size="14">Public repos:</text><text x="295" y="176" font-size="14" font-weight="700" text-anchor="end">3</text></g>
-  <g class="in" style="animation-delay:0.60s"><text x="25" y="202" font-size="14" fill="#00f7ff">[@]</text><text x="62" y="202" font-size="14">Followers:</text><text x="295" y="202" font-size="14" font-weight="700" text-anchor="end">2</text></g>
+  <g class="in" style="animation-delay:0.60s"><text x="25" y="202" font-size="14" fill="#00f7ff">[@]</text><text x="62" y="202" font-size="14">Followers:</text><text x="295" y="202" font-size="14" font-weight="700" text-anchor="end">3</text></g>
   <text x="375" y="137" font-size="44" font-weight="700" text-anchor="middle" fill="#00f7ff">45</text><text x="375" y="165" font-size="12" text-anchor="middle" opacity=".7">contributions / 1y</text>
   </g>
 </svg>
